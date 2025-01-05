@@ -1,5 +1,8 @@
 package com.qa.opencart.tests;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.Assert;
 import java.util.Map;
 
 import org.testng.Assert;
@@ -31,12 +34,12 @@ public class ProductInfoPageTest extends BaseTest {
 		productInfoPage = resultPage.selectProduct("MacBook Pro");
 		Map<String, String> actProductDataMap = productInfoPage.getProductData();
 		
-		softAssert.assertEquals(actProductDataMap.get("Brand"), "Apple");
-		softAssert.assertEquals(actProductDataMap.get("Product Code"), "Product 18");
-		softAssert.assertEquals(actProductDataMap.get("Reward Points"), "800");
-		softAssert.assertEquals(actProductDataMap.get("Availability"), "In Stock");
-		softAssert.assertEquals(actProductDataMap.get("productprice"), "$2,000.00");
-		softAssert.assertEquals(actProductDataMap.get("extaxprice"), "$2,000.00");
+		Assert.assertEquals(actProductDataMap.get("Brand"), "Apple");
+		Assert.assertEquals(actProductDataMap.get("Product Code"), "Product 18");
+		Assert.assertEquals(actProductDataMap.get("Reward Points"), "800");
+		Assert.assertEquals(actProductDataMap.get("Availability"), "In Stock");
+		Assert.assertEquals(actProductDataMap.get("productprice"), "$2,000.00");
+		Assert.assertEquals(actProductDataMap.get("extaxprice"), "$2,000.00");
 		softAssert.assertAll();
 	}
 	

@@ -13,6 +13,7 @@ public class ResultPage {
 
 	private By searchHeader = By.cssSelector("div#content h2");
 	private By results = By.cssSelector("div.product-thumb");
+	
 
 	public ResultPage(WebDriver driver) {
 		this.driver = driver;
@@ -36,5 +37,6 @@ public class ResultPage {
 		eleUtil.doClick(By.linkText(productName));
 		return new ProductInfoPage(driver);
 	}
+	
 
 }

@@ -22,6 +22,9 @@ public class ProductInfoPage {
 	private By productMetaData = By.xpath("(//div[@id='content']//ul[@class='list-unstyled'])[1]/li");
 	private By productPriceData = By.xpath("(//div[@id='content']//ul[@class='list-unstyled'])[2]/li");
 	private By prouctImage = By.cssSelector("ul.thumbnails img");
+	private By addCarts = By.xpath("//button[@id='button-cart']");
+	private By viewItems = By.xpath("//*[@id='cart']/button");
+	private By viewCart = By.xpath("//*[contains(text(),' View Cart')]");
 
 	private Map<String, String> productMap;
 	
@@ -82,6 +85,30 @@ public class ProductInfoPage {
 				eleUtil.waitForElementsPresence(prouctImage, AppConstants.DEFAULT_MED_TIME_OUT).size();
 		System.out.println("Images count ====> " + imagesCount);
 		return imagesCount;
+	}
+	
+	public void selectAddCart() {
+		
+		eleUtil.doClick(addCarts, AppConstants.DEFAULT_SHORT_TIME_OUT);
+		
+	}
+	
+	public void selectViewItems() {
+		
+		eleUtil.doClick(viewItems,AppConstants.DEFAULT_MED_TIME_OUT);
+		
+		//eleUtil.waitForElementVisibleWithFluentFeeatures(viewItems, AppConstants.DEFAULT_MED_TIME_OUT,2);
+	}
+	
+       public CheckOutPage selectViewCarts() {
+		
+		//eleUtil.doClick(addcarts);
+//		eleUtil.doClick(addCarts, AppConstants.DEFAULT_SHORT_TIME_OUT);
+//		eleUtil.doClick(cardTotal,AppConstants.DEFAULT_SHORT_TIME_OUT);
+    	eleUtil.doClick(viewCart,AppConstants.DEFAULT_SHORT_TIME_OUT);
+		return new CheckOutPage(driver);
+		
+		
 	}
 
 
