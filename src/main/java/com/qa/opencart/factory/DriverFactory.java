@@ -122,7 +122,7 @@ public class DriverFactory {
 					break;
 
 				default:
-					System.out.println("plz pass the right env..." + envName);
+					System.out.println("plz pass the right env...." + envName);
 					throw new FrameworkException("INVALID ENV NAME");
 
 				}
