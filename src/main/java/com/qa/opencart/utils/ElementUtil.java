@@ -169,7 +169,7 @@ public class ElementUtil {
 		System.out.println("Total number of suggestions===" + totalSuggestions);
 
 		if (totalSuggestions == 0) {
-			System.out.println("No suggesstions found...");
+			System.out.println("No suggesstions found..");
 			throw new FrameworkException("No Suggestions FOUND");
 		}
 
