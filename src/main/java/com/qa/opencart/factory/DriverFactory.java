@@ -90,7 +90,7 @@ public class DriverFactory {
 		prop = new Properties();
 		FileInputStream ip = null;
 
-		String envName = System.getProperty("env");
+		String envName = System.getProperty("envName");
 
 		System.out.println("Running test on env :" + envName);
 
