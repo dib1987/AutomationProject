@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.opencart.exceptions.FrameworkException;
-import com.qa.opencart.factory.DriverFactory;
+import com.qa.opencart.factory.DriverFactory1;
 
 
 
@@ -66,7 +66,7 @@ public class ElementUtil {
 	
 	
 	private void checkElementHighlight(WebElement element) {
-		if(Boolean.parseBoolean(DriverFactory.isHighlight)) {
+		if(Boolean.parseBoolean(DriverFactory1.isHighlight)) {
 			jsUtil.flash(element);
 		}
 	}

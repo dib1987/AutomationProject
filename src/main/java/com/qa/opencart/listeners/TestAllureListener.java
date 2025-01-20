@@ -9,7 +9,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.qa.opencart.factory.DriverFactory;
+import com.qa.opencart.factory.DriverFactory1;
 
 
 public class TestAllureListener implements ITestListener {
@@ -64,9 +64,9 @@ public class TestAllureListener implements ITestListener {
 		Object testClass = iTestResult.getInstance();
 		//WebDriver driver = BasePage.getDriver();
 		// Allure ScreenShotRobot and SaveTestLog
-		if (DriverFactory.getDriver() instanceof WebDriver) {
+		if (DriverFactory1.getDriver() instanceof WebDriver) {
 			System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
-			saveScreenshotPNG(DriverFactory.getDriver());
+			saveScreenshotPNG(DriverFactory1.getDriver());
 		}
 		// Save a log on allure.
 		saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");		
